@@ -1,3 +1,7 @@
+Here's the updated `README.md` file for your project:
+
+---
+
 # Magical Arena
 
 This is a simple simulation of a magical arena where two players fight each other. Each player has health, strength, and attack attributes. Players attack each other in turns until one of them dies.
@@ -26,7 +30,7 @@ To run the tests, execute the following command:
 ```sh
 npm test
 ```
-This will run the unit tests for the `Player` class using Mocha and assert.
+This will run the unit tests for the `Player`, `Die`, and `Arena` classes using Mocha and assert.
 
 ## Code Explanation
 
@@ -39,14 +43,13 @@ This will run the unit tests for the `Player` class using Mocha and assert.
 ### Die Class
 
 - **Constructor**: Initializes a new die with a given number of sides.
-- **roll**: Simulates rolling the die and returns a random number between 1 and 6.
+- **roll**: Simulates rolling the die and returns a random number between 1 and the number of sides.
 
 ### Arena Class
 
 - **Constructor**: Initializes the arena with two players and two 6-sided dice (one for attacking and one for defending).
-- **startFight**: Starts the fight between the two players, continuing until one of them dies.
-- **fightRound**: Executes a round of the fight, determining the attacker and defender based on current health.
-- **attack**: Handles the attack logic, calculating damage dealt and reducing the defender's health accordingly.
+- **startFight**: Starts the fight between the two players, continuing until one of them dies. Alternates attacks between players each round.
+- **getFirstAttacker**: Determines the first attacker based on the current health of the players or randomly if they have equal health.
 
 ## Example Output
 
@@ -56,11 +59,10 @@ Player A rolls 5 for attack (Damage: 50)
 Player B rolls 2 for defense (Defended: 20)
 Player B takes 30 damage
 Player B health is now 70
-Player B counterattacks Player A
+Player B attacks Player A
 Player B rolls 4 for attack (Damage: 20)
 Player A rolls 3 for defense (Defended: 15)
 Player A takes 5 damage
 Player A health is now 45
 ...
 The winner is Player B
-```
