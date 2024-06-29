@@ -1,7 +1,3 @@
-Here's the updated `README.md` file for your project:
-
----
-
 # Magical Arena
 
 This is a simple simulation of a magical arena where two players fight each other. Each player has health, strength, and attack attributes. Players attack each other in turns until one of them dies.
