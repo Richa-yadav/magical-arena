@@ -88,7 +88,6 @@ describe('Arena', function () {
         assert(firstAttacker === playerA || firstAttacker === playerB);
     });
 
-    // New test case
     it('should ensure players take turns attacking and defending', function () {
         const playerA = new Player('Player A', 50, 5, 10);
         const playerB = new Player('Player B', 50, 10, 5);
